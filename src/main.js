@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 // import Swiper styles
 import 'swiper/css';
 
-var swiper = new Swiper('.projects-js', {
+const swiper = new Swiper('.projects-js', {
   slidesPerView: 1,
   spaceBetween: 30,
   keyboard: {
@@ -17,4 +17,15 @@ var swiper = new Swiper('.projects-js', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Tab') {
+    event.preventDefault(); 
+    if (event.shiftKey) {
+      swiper.slidePrev();
+    } else {
+      swiper.slideNext();
+    }
+  }
 });
