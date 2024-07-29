@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 // import Swiper styles
 import 'swiper/css';
 
-const swiper = new Swiper('.projects-js', {
+export const swiper = new Swiper('.projects-js', {
   slidesPerView: 1,
   spaceBetween: 30,
   keyboard: {
